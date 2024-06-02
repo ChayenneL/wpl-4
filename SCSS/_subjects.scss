@@ -1,0 +1,239 @@
+@use "base" as *;
+
+@mixin box() {
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0;
+  margin: 0.5rem;
+}
+
+@mixin zw {
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+}
+
+@mixin hover() {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0%);
+  transform: scale(110%);
+}
+
+@mixin text() {
+  position: relative;
+  opacity: 0;
+  z-index: 4;
+  transition: top 0.6s, opacity 1s;
+  font-weight: 600;
+  font-size: 10pt;
+  color: $primary;
+}
+
+@mixin text-hover() {
+  opacity: 1;
+}
+
+.subjects {
+  margin-top: 5rem;
+
+  .motion-design {
+    @include box;
+    height: 13rem;
+    width: 13rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    .motion-zw {
+      @include zw;
+      height: 13rem;
+    }
+
+    .motion-text {
+      @include text;
+      top: -14rem;
+    }
+
+    &:hover {
+      .motion-zw {
+        @include hover;
+      }
+
+      .motion-text {
+        @include text-hover;
+        top: -12.5rem;
+      }
+    }
+
+  }
+
+  .wpl {
+    @include box;
+    height: 6rem;
+    width: 6rem;
+    a {
+      text-decoration: none;
+    }
+    .wpl-zw {
+      @include zw;
+      height: 6rem;
+    }
+
+    .wpl-text {
+      @include text;
+      top: -7rem;
+    }
+
+    &:hover {
+      .wpl-zw {
+        @include hover;
+      }
+
+      .wpl-text {
+        @include text-hover;
+        top: -6rem;
+      }
+    }
+  }
+
+  .ux-ui {
+    @include box;
+    height: 6rem;
+    width: 6rem;
+    a {
+      text-decoration: none;
+    }
+    .ux-ui-zw {
+      @include zw;
+      height: 6rem;
+    }
+
+    .ux-ui-text {
+      @include text;
+      top: -7rem;
+    }
+
+    &:hover {
+      .ux-ui-zw {
+        @include hover;
+      }
+
+      .ux-ui-text {
+        @include text-hover;
+        top: -6rem;
+      }
+    }
+  }
+
+  .web-expert {
+    @include box;
+    height: 6rem;
+    width: 13rem;
+    a {
+      text-decoration: none;
+    }
+    .web-zw {
+      @include zw;
+      left: -0.7rem;
+      width: 13rem;
+      padding: 0;
+    }
+
+    .web-text {
+      @include text;
+      top: -7rem;
+    }
+
+    &:hover {
+      .web-zw {
+        @include hover;
+      }
+
+      .web-text {
+        @include text-hover;
+        top: -6rem;
+      }
+    }
+
+  }
+
+  .interaction-design {
+    @include box;
+    margin-bottom: 1rem;
+    height: 6rem;
+    width: 13rem;
+    a {
+      text-decoration: none;
+    }
+    .interaction-zw {
+      @include zw;
+      width: 13rem;
+      padding: 0;
+      left: -0.7rem;
+
+    }
+
+    .interaction-text {
+      @include text;
+      top: -7rem;
+    }
+
+    &:hover {
+      .interaction-zw {
+        @include hover;
+      }
+
+      .interaction-text {
+        @include text-hover;
+        top: -6rem;
+      }
+    }
+
+  }
+
+  .data-vis {
+    @include box;
+    height: 6rem;
+    width: 13rem;
+    a{
+      text-decoration: none;
+    }
+    .data-zw {
+      @include zw;
+      width: 13rem;
+      padding: 0;
+      left: -0.7rem;
+    }
+
+    .data-text {
+      @include text;
+      top: -7rem;
+    }
+
+    &:hover {
+      .data-zw {
+        @include hover;
+      }
+
+      .data-text {
+        @include text-hover;
+        top: -6rem;
+      }
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  .subjects {
+    .interaction-design,
+    .data-vis {
+      margin: 0.5rem auto;
+    }
+  }
+}
+

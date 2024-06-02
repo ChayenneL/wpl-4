@@ -1,0 +1,26 @@
+@use "base" as *;
+
+.main-pitch{
+  margin-top: 2rem;
+  .terugknop{
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+    background-color: $primary;
+    border: none;
+    color: #fff;
+  }
+  a{
+    text-decoration: none;
+    color: $primary;
+  }
+  h2{
+    margin-top: 3rem;
+  }
+  p{
+    margin: 1rem;
+  }
+  iframe{
+    margin: 3rem auto;
+    overflow: hidden;
+  }
+}

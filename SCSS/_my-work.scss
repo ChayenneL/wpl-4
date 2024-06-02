@@ -1,0 +1,150 @@
+@use "base" as *;
+
+@mixin box {
+  width: 33%;
+  height: 30rem;
+  overflow: hidden;
+  margin: 0 auto;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
+}
+
+@mixin image {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.8s cubic-bezier(.85,.07,.34,1.37), top 0.8s, left 0.8s;
+}
+
+@mixin img-hover {
+  transform: scale(0.25);
+}
+
+@mixin inhoud {
+  opacity: 0;
+  position: relative;
+  transition: opacity 0.8s;
+}
+
+@mixin inhoud-hover {
+  opacity: 1;
+}
+
+.my-work {
+  margin-top: 5rem;
+  h2{
+    margin-bottom: 2rem;
+  }
+  .examples {
+    .paradise {
+      @include box;
+
+      .paradise-cover img {
+        @include image;
+        left: -1.5rem;
+
+      }
+
+      .paradise-inhoud {
+        @include inhoud;
+        top: -35rem;
+        img{
+          height: 9.5rem;
+          width: fit-content;
+          position: relative;
+          left: 5rem;
+          top: 0.5rem
+        }
+      }
+
+      &:hover {
+        .paradise-cover img {
+          @include img-hover;
+          top: 5rem;
+          left: -5rem;
+
+        }
+
+        .paradise-inhoud {
+          @include inhoud-hover;
+
+        }
+      }
+    }
+
+    .mitro {
+      @include box;
+
+      .mitro-cover img {
+        @include image;
+        top: -2rem;
+        left: -2rem;
+        }
+
+      .mitro-inhoud {
+        @include inhoud;
+        top: -45rem;
+        margin: 0 auto;
+        a{
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          border-radius: 10rem;
+          background-color: #347759;
+          border: none;
+          color: #fff;
+        }
+      }
+
+      &:hover {
+        .mitro-cover img {
+          @include img-hover;
+          top: 2rem;
+          left: -20rem;
+        }
+
+        .mitro-inhoud {
+          @include inhoud-hover;
+        }
+      }
+    }
+
+    .aandenkens {
+      @include box;
+
+      .aandenkens-cover img {
+        @include image;
+        left: -20rem;
+        top: -20rem;
+      }
+
+      .aandenkens-inhoud {
+        @include inhoud;
+        top: -65rem;
+      }
+
+      &:hover {
+        .aandenkens-cover img {
+          @include img-hover;
+          transform: scale(0.2);
+          top: -10rem;
+        }
+
+        .aandenkens-inhoud {
+          @include inhoud-hover;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .paradise-cover img {
+    height: fit-content;
+    width: 110%;
+    margin: 0 auto;
+    .paradise-inhoud{
+      top: -70rem;
+    }
+  }
+}
+

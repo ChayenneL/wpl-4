@@ -1,0 +1,53 @@
+@use "base" as *;
+
+// ----------------- WPL 2 -----------------
+#wpl_2 {
+  margin-top: 5rem;
+}
+
+.schoolprojecten2-bollen a {
+  text-decoration: none;
+  color: $secondary;
+}
+.schoolprojecten2-bollen{
+  margin: 2rem 0;
+}
+.schoolprojecten2-item {
+  background-color: $primary;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+@media screen and (max-width: 768px){
+  .schoolprojecten2-item {
+    background-size: 50%;
+  }
+}
+@media screen and (max-width: 576px){
+  .schoolprojecten2-item {
+    background-size: 80%;
+  }
+}
+
+// ----------------- EINDREFLECTIE -----------------
+#eindevaluatie {
+  width:90%;
+  margin: 3rem auto;
+}
+
+#eindevaluatie h3 {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+
+#eindevaluatie h4 {
+  font-weight: 400;
+  font-size: 20pt;
+}
+
+#eindevaluatie p {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,761 @@
+@use "base" as *;
+
+// ----------------- WPL 1 -----------------
+#wpl_1 {
+  margin-top: 10rem;
+}
+
+#wpl_1 .schoolprojecten-bollen a {
+  text-decoration: none;
+  color: #ececec;
+}
+
+#wpl_1 .schoolprojecten-item {
+  background-color: $primary;
+  border-radius: 50%;
+  margin: 2rem 1rem;
+}
+
+/*!* CAROUSEL*!*/
+#wpl_1 .schoolprojecten-bollen {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+#wpl_1 .schoolprojecten-item {
+  overflow-x: auto;
+}
+
+.schoolprojecten-bollen::-webkit-scrollbar,
+.schoolprojecten-item::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow-icon i {
+  color: #2b7f4a;
+  font-size: 50pt;
+}
+
+.arrow-icon i:hover {
+  opacity: 1;
+}
+
+// ----------------- KERNWAARDEN EN MOTIVATIE -----------------
+#section-kernwaarden {
+  width: 70rem;
+  margin: 12rem auto;
+}
+
+#kernwaarden-bollen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#kernwaarden-bollen p {
+  display: block;
+  width: 15rem;
+  text-align: center;
+  font-size: 25pt;
+  padding: 7rem 0;
+  color: #ececec;
+  background-image: url("./assets/bol.png");
+  background-size: 15rem 15rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#section-kernkwadranten table {
+  margin-bottom: 5rem;
+}
+
+#section-kernkwadranten table tr td {
+  font-size: 18pt;
+  padding: 0.5rem;
+}
+
+#section-kernkwadranten table tr td i {
+  color: #2b7f4a;
+  font-size: 24pt;
+}
+
+#section-kernkwadranten .kernkwadranten-bruin {
+  background-color: #2b7f4a;
+  color: #ececec;
+  font-size: 20pt;
+  font-weight: 300;
+  text-align: center;
+  padding: 1rem;
+  width: 20rem;
+}
+
+#kernkwadranten-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1250px) {
+  #section-kernwaarden {
+    width: 90%;
+    margin: 10% 5% 0 5%;
+  }
+
+  #kernwaarden-bollen p {
+    font-size: 16pt;
+    width: 10rem;
+    background-size: 10rem 10rem;
+  }
+
+  #section-kernkwadranten {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #section-kernkwadranten table tr td {
+    font-size: 12pt;
+  }
+
+  #section-kernkwadranten table tr td i {
+    font-size: 16pt;
+  }
+
+  #section-kernkwadranten .kernkwadranten-bruin {
+    font-size: 16pt;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #kernwaarden-bollen p {
+    font-size: 12pt;
+    width: 6rem;
+    background-size: 6rem 6rem;
+  }
+
+  #section-kernkwadranten table tr td {
+    font-size: 12pt;
+  }
+}
+@media screen and (max-width: 500px){
+  #kernwaarden-bollen p{
+    font-size: 11pt;
+    width: 6rem;
+    background-size: 6rem 6rem;
+  }
+  #section-kernkwadranten table tr td{
+    font-size: 10pt;
+  }
+  #kernkwadranten-links{
+    justify-content: flex-start;
+  }
+  #section-kernkwadranten .kernkwadranten-bruin{
+    font-size: 11pt;
+  }
+}
+
+// ----------------- PERSONAL BRANDING -----------------
+#mijn-look {
+  width: 50rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#mijn-look h3{
+  font-weight: 300;
+  width: 100%;
+}
+#mijn-look section {
+  width: 24.5rem;
+  margin: auto;
+}
+
+#mijn-look img {
+  width: 95%;
+}
+
+#hoe-zien-anderen-mij {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+  margin-top: 7rem;
+}
+
+#hoe-zien-anderen-mij p {
+  background-color: #2b7f4a;
+  color: #ececec;
+  border-radius: 1rem;
+  font-size: 18pt;
+  width: 11rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem 0.2rem;
+}
+
+#mijn-look-aspecten {
+  width: 50rem;
+  display: contents;
+}
+
+#mijn-look-aspecten p {
+  background-color: #2b7f4a;
+  color: #ececec;
+  border-radius: 1rem;
+  font-size: 18pt;
+  width: 14rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem 0.2rem;
+}
+
+#mijn-stijl {
+  margin-top: 10rem;
+  margin-left: 10rem;
+}
+
+#mijn-stijl-voorbeeld-1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 10rem 0;
+}
+
+#mijn-stijl-voorbeeld-1_1 {
+  width: 40rem;
+  height: fit-content;
+  z-index: 2;
+}
+
+#mijn-stijl-voorbeeld-1_2 {
+  width: 40rem;
+  height: fit-content;
+  z-index: 1;
+  margin: -20rem 0 0 30rem;
+}
+
+#mijn-stijl-voorbeeld-1-tekst p {
+  background-color: #2b7f4a;
+  color: #ececec;
+  border-radius: 1rem;
+  font-size: 18pt;
+  width: 13rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem 0.2rem;
+}
+
+#mijn-stijl-voorbeeld-1-tekst {
+  margin: -52rem 0 0 45rem;
+}
+
+#mijn-stijl-voorbeeld-2 {
+  width: 80rem;
+  margin: 12rem -5rem 0 -5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#mijn-stijl-voorbeeld-2 p {
+  background-color: #2b7f4a;
+  color: #ececec;
+  border-radius: 1rem;
+  font-size: 18pt;
+  width: 13rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem 0.2rem;
+}
+
+#mijn-stijl-voorbeeld-2-tekst-1 {
+  display: flex;
+  margin: 0 0 0 12rem;
+}
+
+#mijn-stijl-voorbeeld-2-tekst-1 p:nth-child(2) {
+  font-size: 16pt;
+}
+
+#mijn-stijl-voorbeeld-2-afbeelding {
+  margin-top: 1rem;
+  display: flex;
+}
+
+#mijn-stijl-voorbeeld-2-afbeelding img {
+  width: 30rem;
+  height: fit-content;
+}
+
+#voorbeeld-2_1 {
+  margin-top: 5rem;
+  z-index: 2;
+}
+
+#voorbeeld-2_2 {
+  margin-left: -3rem;
+  z-index: 1;
+}
+
+#voorbeeld-2_3 {
+  margin: -8rem 0 0 -3rem;
+  z-index: 3;
+}
+
+#voorbeeld-2_4 {
+  margin: 20rem 0 0 -30rem;
+  z-index: 4;
+}
+
+#mijn-stijl-voorbeeld-2-tekst-2 {
+  display: flex;
+  margin: -8rem 0 0 20rem;
+}
+
+@media screen and (max-width: 1250px) {
+  #mijn-stijl {
+    width: 90%;
+    margin: 10% auto 0 auto;
+  }
+
+  #mijn-stijl-voorbeeld-1_1 {
+    width: 60%;
+    margin: 0;
+  }
+
+  #mijn-stijl-voorbeeld-1_2 {
+    width: 50%;
+    margin: -25% 0 0 55%;
+  }
+
+  #mijn-stijl-voorbeeld-1-tekst {
+    margin: -70% 0 0 65%;
+  }
+
+  #mijn-stijl-voorbeeld-1-tekst p {
+    font-size: 16pt;
+    height: 15%;
+  }
+
+  #mijn-stijl-voorbeeld-2 {
+    width: 90%;
+    margin: auto;
+  }
+
+  #mijn-stijl-voorbeeld-2-tekst-1 p, #mijn-stijl-voorbeeld-2-tekst-1 p:nth-child(2) {
+    font-size: 14pt;
+    width: 30%;
+    height: 100%
+  }
+
+  #mijn-stijl-voorbeeld-2-tekst-1 {
+    width: 70%;
+    margin: 0;
+  }
+
+  #mijn-stijl-voorbeeld-2-tekst-2 p {
+    font-size: 14pt;
+    width: 50%;
+    height: 100%;
+  }
+
+  #mijn-stijl-voorbeeld-2-tekst-2 {
+    margin: -15% 0 0 15%;
+  }
+
+  #mijn-stijl-voorbeeld-2-afbeelding img {
+    width: 40%;
+  }
+
+  #voorbeeld-2_1 {
+    margin: 10% 0 0 -5%;
+  }
+
+  #voorbeeld-2_2 {
+    margin: 1% 0 0 -4%;
+  }
+
+  #voorbeeld-2_3 {
+    margin: -10% 0 0 -4%;
+  }
+
+  #voorbeeld-2_4 {
+    margin: 30% 0 0 -40%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #mijn-look {
+    width: 90%;
+    margin: 10% auto;
+  }
+
+  #mijn-look section {
+    width: 50%;
+  }
+
+  #hoe-zien-anderen-mij p {
+    font-size: 14pt;
+    width: 8rem;
+    height: 6rem;
+  }
+
+  #mijn-look-aspecten p {
+    font-size: 14pt;
+    width: 8rem;
+    height: 6rem;
+  }
+
+  #hoe-zien-anderen-mij {
+    margin-top: 0;
+  }
+
+  #hoe-zien-anderen-mij p {
+    font-size: 12pt;
+    width: 90%;
+    height: 0;
+    padding: 2rem;
+  }
+
+  .verdwijnt {
+    display: none;
+  }
+
+  #mijn-stijl-voorbeeld-1-tekst {
+    margin: -80% 0 0 62%;
+  }
+
+  #mijn-stijl-voorbeeld-1-tekst p {
+    font-size: 12pt;
+    height: 15%;
+  }
+
+  #mijn-stijl-voorbeeld-2-tekst-1 {
+    margin: 0 0 0 -5%;
+  }
+
+  #mijn-stijl-voorbeeld-2-tekst-1 p, #mijn-stijl-voorbeeld-2-tekst-1 p:nth-child(2), #mijn-stijl-voorbeeld-2-tekst-2 p {
+    font-size: 10pt;
+  }
+
+  #mijn-stijl-voorbeeld-2-tekst-2 {
+    margin: -15% 0 0 5%;
+  }
+}
+@media screen and (max-width: 500px){
+  #hoe-zien-anderen-mij{
+    margin-top: 0;
+  }
+  #hoe-zien-anderen-mij p{
+    font-size: 11pt;
+    width: 90%;
+    height: 0;
+    padding: 1rem;
+  }
+  .verdwijnt{
+    display: none;
+  }
+  #mijn-stijl-voorbeeld-1_2{
+    margin: -15% 0 0 50%;
+  }
+  #mijn-stijl-voorbeeld-1{
+    margin-bottom: 1%;
+  }
+  #mijn-stijl-voorbeeld-1-tekst p{
+    font-size: 11pt;
+    width: 150%;
+  }
+  #mijn-stijl-voorbeeld-2-tekst-2{
+    margin: 0;
+  }
+}
+
+// ----------------- FEEDBACK EN REFLECTEREN -----------------
+#feedback-reflecteren h3{
+  font-weight: 300;
+  width: 100%;
+}
+
+// ----------------- ANALYSE VAN DE ARBEIDSMARKT -----------------
+#main_arbeidsmarkt{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+#vacature-1, #vacature-2, #vacature-3{
+  margin-left: 10rem;
+}
+#vacature-1 h3, #vacature-2 h3, #vacature-3 h3{
+  font-weight: 300;
+}
+#vacature-1 {
+  display: flex;
+}
+
+#vacature-1 img {
+  width: 45rem;
+  height: fit-content;
+  margin-top: 5rem;
+}
+
+#vacature-1-tekst {
+  margin: 20rem 0 0 -10rem;
+}
+
+#vacature-1-tekst h3 {
+  margin: -15rem 0 0 12rem;
+}
+
+#vacature-1-tekst p, #vacature-2-tekst p, #vacature-3-tekst p {
+  background-color: #2b7f4a;
+  color: #ececec;
+  border-radius: 1rem;
+  font-size: 14pt;
+  width: 12rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem 0.2rem;
+}
+
+.vacature-tekst-vakken {
+  margin-top: 1rem;
+}
+
+.vacature-tekst-vakken-top {
+  display: flex;
+  justify-content: center;
+}
+
+.vacature-tekst-vakken-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.vacature-tekst-vakken-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+#vacature-2 {
+  display: flex;
+  margin-top: 5rem;
+}
+
+#vacature-2 img {
+  width: 40rem;
+  height: fit-content;
+}
+
+#vacature-2-tekst {
+  margin: 15rem 2rem 0 -2rem;
+}
+
+#vacature-2-tekst h3 {
+  margin-bottom: 1rem;
+}
+
+#vacature-2-hardskills p {
+  font-size: 7pt;
+}
+
+#vacature-3 {
+  margin-top: 5rem;
+  display: flex;
+}
+
+#vacature-3 img {
+  width: 45rem;
+}
+
+#vacature-3-tekst {
+  margin: 22rem 0 0 -15rem;
+}
+
+#vacature-3-tekst h3 {
+  margin-left: 20rem;
+}
+
+#vacature-3-hardskills p {
+  font-size: 11pt;
+}
+
+@media screen and (max-width: 1250px) {
+  #vacature-1, #vacature-2, #vacature-3{
+    margin-left: 0;
+  }
+  #vacature-1 img, #vacature-3 img {
+    width: 60%;
+  }
+
+  #vacature-1-tekst p, #vacature-2-tekst p, #vacature-3-tekst p {
+    width: 7rem;
+    height: 5rem;
+    font-size: 12pt;
+  }
+
+  #vacature-1-tekst {
+    margin-top: 40%;
+  }
+
+  #vacature-2-tekst {
+    margin: 0 0 0 1%;
+  }
+
+  #vacature-2-tekst h3 {
+    margin: 10% 0 0 10%;
+  }
+
+  #vacature-2-hardskills p {
+    font-size: 5pt;
+  }
+
+  #vacature-2 img {
+    width: 40%;
+  }
+
+  #vacature-3 {
+    margin: 0 0 5% 5%;
+  }
+
+  #vacature-3-tekst h3 {
+    margin: 0 0 0 60%;
+  }
+
+  #vacature-3-hardskills p {
+    font-size: 8pt;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #vacature-1-tekst p, #vacature-2-tekst p, #vacature-3-tekst p {
+    width: 8rem;
+    height: 4rem;
+    font-size: 6pt;
+  }
+
+  #vacature-1-tekst {
+    margin: 50% 0 0 -15%;
+  }
+
+  #vacature-1-tekst h3 {
+    margin-left: 25%;
+  }
+
+  #vacature-2-hardskills p {
+    font-size: 3pt;
+  }
+
+  #vacature-3 {
+    margin-top: 2%;
+  }
+
+  #vacature-3-tekst h3 {
+    margin: 50% 0 0 40%;
+  }
+
+  #vacature-3-tekst {
+    margin: 0 0 0 -20%;
+  }
+}
+@media screen and (max-width: 500px){
+  #vacature-1-tekst p{
+    font-size: 8pt;
+  }
+  #vacature-1-tekst p, #vacature-2-tekst p, #vacature-3-tekst p{
+    border-radius: 0.5rem;
+    width: 5rem;
+    height: 3rem;
+  }
+  #vacature-1-tekst{
+    margin: 70% 0 0 -15%;
+  }
+  #vacature-1-tekst h3{
+    margin-left: 40%;
+  }
+}
+// ----------------- REFLECTIE VAN DE GASTCOLLEGES -----------------
+
+#gastcolleges {
+  width: 60rem;
+}
+
+#gastcolleges h3 {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+
+#gastcolleges h4 {
+  font-weight: 400;
+  font-size: 20pt;
+}
+
+#gastcolleges p {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1250px) {
+  #gastcolleges {
+    width: 90%;
+    margin: 10% auto;
+  }
+}
+
+// ----------------- CONCEPT POSTER -----------------
+#concept-poster {
+  text-align: center;
+}
+
+#concept-poster img {
+  width: 70rem;
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1250px) {
+  #concept-poster img {
+    width: 90%;
+    margin-top: 10%;
+  }
+
+  #eindreflectie {
+    width: 90%;
+    margin: 10% auto;
+  }
+}
+
+// ----------------- EINDREFLECTIE -----------------
+#eindreflectie {
+  width:90%;
+  margin: 3rem auto;
+}
+
+#eindreflectie h3 {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+
+#eindreflectie h4 {
+  font-weight: 400;
+  font-size: 20pt;
+}
+
+#eindreflectie p {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
